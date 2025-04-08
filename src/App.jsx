@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
-  const intervalId = setInterval(() => {
+  setInterval(() => {
     setTime(new Date().toLocaleTimeString());
   }, 1000);
 
