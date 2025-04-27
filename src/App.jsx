@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
-  setInterval(() => {
-    setTime(new Date().toLocaleTimeString());
-  }, 1000);
+  useEffect(() => {
+    setInterval(() => {
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
+  }, [])
+ 
 
   return (
     <>
